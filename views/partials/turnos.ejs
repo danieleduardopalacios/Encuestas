@@ -1,0 +1,33 @@
+  <!-- Section Content -->
+  <section id="turnos" class="g-theme-bg-gray-dark-v1">
+    <div class="container-fluid px-0">
+      <div class="row no-gutters">
+        <div class="col-md-6 g-py-50 g-py-70--md g-py-100--xl g-px-15 g-px-40--md g-px-80--xl">
+          <div class="u-heading-v2-2--bottom g-brd-primary g-mb-30">
+            <h2 class="text-uppercase u-heading-v2__title g-font-weight-800 g-font-size-30 g-font-size-40--md g-color-white"><%= contenido.titulo %></h2>
+          </div>
+
+          <% contenido.items && contenido.items.forEach(function(elem,index){ %>
+          <!-- Icon Blocks -->
+          <div class="media align-items-start g-mb-30">
+            <div class="d-flex g-mr-10">
+              <span class="g-font-weight-700 g-font-size-20 g-line-height-0_7 g-color-primary"><%= index + 1 %></span>
+            </div>
+
+            <div class="media-body">
+              <h3 class="h6 text-uppercase g-font-weight-800 g-color-white mb-20"><%= elem.titulo %></h3>
+              <p class="g-font-size-default g-color-gray-light-v4 mb-0">
+                <%- elem.texto.replace(/\r?\n/g, '<br />') %>
+              </p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+          <% }); %>
+        
+        </div>
+
+        <div class="col-md-6 g-min-height-300 g-bg-img-hero" style="background-image: url(http://gestor.mindit.com.ar/uploads/<%= contenido.archivo %>);"></div>
+      </div>
+    </div>
+  </section>
+  <!-- End Section Content -->

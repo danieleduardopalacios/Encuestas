@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Title -->
+  <title>Psicoterapia en el mundo</title>
+
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+
+  <!-- CSS Global Compulsory -->
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-line/css/simple-line-icons.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/icon-hs/style.css">
+
+  <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsparallaxer.css">
+  <link rel="stylesheet" href="assets/vendor/dzsparallaxer/dzsscroller/scroller.css">
+  <link rel="stylesheet" href="assets/vendor/dzsparallaxer/advancedscroller/plugin.css">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/hamburgers/hamburgers.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
+
+  <!-- Revolution Slider -->
+  <link rel="stylesheet"
+    href="../../assets/vendor/revolution-slider/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+  <link rel="stylesheet" href="../../assets/vendor/revolution-slider/revolution/css/settings.css">
+  <link rel="stylesheet" href="../../assets/vendor/revolution-slider/revolution/css/layers.css">
+  <link rel="stylesheet" href="../../assets/vendor/revolution-slider/revolution/css/navigation.css">
+
+  <!-- CSS Template -->
+  <link rel="stylesheet" href="assets/css/styles.op-lawyer.css">
+
+  <!-- CSS Customization -->
+  <link rel="stylesheet" href="../../assets/css/custom.css">
+
+  <style>
+    .btn-whatsapp {
+      display: block;
+      width: 70px;
+      height: 70px;
+      color: #fff;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      border-radius: 50%;
+      line-height: 80px;
+      text-align: center;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+
+<body>
+  <main class="g-pt-65 g-pt-90--md">
+    <%- include('partials/header.ejs'); %>
+    <% modules.forEach(function(module){ %>
+    
+    <% if(module.id_type_module == 1){ %>
+      <%- include('partials/sliderprincipal.ejs',{ contenido:JSON.parse(module.contenido) }); %>
+    <% }; %>
+    <% if(module.id_type_module == 2){ %>
+      <%- include('partials/about.ejs', { contenido:JSON.parse(module.contenido) }); %>
+    <% }; %>
+    <% if(module.id_type_module == 3){ %>
+      <%- include('partials/quienessomos.ejs',{ contenido:JSON.parse(module.contenido) } ); %>
+    <% }; %>
+    <% if(module.id_type_module == 4){ %>
+      <%- include('partials/contactanos.ejs',{ contenido:JSON.parse(module.contenido) }); %>
+    <% }; %>
+    <% if(module.id_type_module == 5){ %>
+      <%- include('partials/turnos.ejs',{ contenido:JSON.parse(module.contenido) }); %>
+    <% }; %>
+   
+
+    <% }); %>
+    <%- include('partials/footer.ejs'); %>
+
+
+
+  </main>
+
+
+
+
+  <!-- JS Global Compulsory -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+  <script src="../../assets/vendor/popper.js/popper.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="../../assets/vendor/appear.js"></script>
+  <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
+
+  <script src="assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
+  <!-- <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>  -->
+
+  <!-- JS Revolution Slider -->
+  <script src="../../assets/vendor/revolution-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+  <script src="../../assets/vendor/revolution-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+  <script
+    src='../../assets/vendor/revolution-slider/revolution-addons/slicey/js/revolution.addon.slicey.min.js'></script>
+
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script
+    src="../../assets/vendor/revolution-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+  <!-- JS Unify -->
+  <script src="../../assets/js/hs.core.js"></script>
+  <script src="../../assets/js/components/hs.header.js"></script>
+  <script src="../../assets/js/helpers/hs.hamburgers.js"></script>
+  <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+  <script src="../../assets/js/components/hs.carousel.js"></script>
+  <script src="../../assets/js/components/gmap/hs.map.js"></script>
+  <script src="../../assets/js/components/hs.go-to.js"></script>
+
+  <!-- JS Customization -->
+  <script src="../../assets/js/custom.js"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    // initialization of google map
+    function initMap() {
+      $.HSCore.components.HSGMap.init('.js-g-map');
+    }
+
+    // initialization of revolution slider
+    var tpj = jQuery,
+      promoSlider;
+
+    tpj(document).on('ready', function () {
+      if (tpj('#promoSlider').revolution == undefined) {
+        revslider_showDoubleJqueryError('#promoSlider');
+      } else {
+        promoSlider = tpj('#promoSlider').show().revolution({
+          sliderType: 'hero',
+          jsFileLocation: '../../revolution/js/',
+          sliderLayout: 'fullwidth',
+          dottedOverlay: 'none',
+          delay: 9000,
+          navigation: {},
+          responsiveLevels: [1240, 1024, 778, 480],
+          gridwidth: [1240, 1024, 778, 480],
+          gridheight: [600, 500, 400, 300],
+          lazyType: 'none',
+          parallax: {
+            type: 'mouse',
+            origo: 'slidercenter',
+            speed: 2000,
+            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50]
+          },
+          shadow: 0,
+          spinner: 'off',
+          autoHeight: 'off',
+          disableProgressBar: 'on',
+          hideThumbsOnMobile: 'off',
+          hideSliderAtLimit: 0,
+          hideCaptionAtLimit: 0,
+          hideAllCaptionAtLilmit: 0,
+          debugMode: false,
+          fallbacks: {
+            simplifyAll: 'off',
+            disableFocusListener: false
+          }
+        });
+      }
+
+      $("#formcontacto").on("submit", function (event, data) {
+        event.preventDefault();
+        $.post(
+          'mailphp/enviar_correo.php',
+          $(this).serialize())
+          .done(function (data) {
+            $('#contactmsj').html(`<div class="alert alert-dismissible fade show g-bg-teal g-color-white rounded-0" role="alert">
+  <button type="button" class="close u-alert-close--light" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+
+  <div class="media">
+    <span class="d-flex g-mr-10 g-mt-5">
+      <i class="icon-check g-font-size-25"></i>
+    </span>
+    <span class="media-body align-self-center">
+       El envio del mensaje se ha realizado con éxito. Nos contactaremos con usted a la brevedad.
+    </span>
+  </div>
+</div>`);
+            $("#formcontacto")[0].reset();
+
+          })
+          .fail(function (err) {
+
+            $('#contactmsj').html(`<div class="alert alert-dismissible fade show g-bg-red g-color-white rounded-0" role="alert">
+  <button type="button" class="close u-alert-close--light" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+
+  <div class="media">
+    <span class="d-flex g-mr-10 g-mt-5">
+      <i class="icon-ban g-font-size-25"></i>
+    </span>
+    <span class="media-body align-self-center">
+      Ocurrió un error vuelva a intentar nuevamente. Revise la información cargada y agregue una casilla de mail válida.
+    </span>
+  </div>
+</div>`);
+
+
+          });
+      });
+    });
+
+    $(document).on('ready', function () {
+      // initialization of carousel
+      $.HSCore.components.HSCarousel.init('.js-carousel');
+
+      // initialization of header
+      $.HSCore.components.HSHeader.init($('#js-header'));
+      $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+      // initialization of go to section
+      $.HSCore.components.HSGoTo.init('.js-go-to');
+    });
+
+    $(window).on('load', function () {
+      // initialization of HSScrollNav
+      $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
+        duration: 700
+      });
+    });
+  </script>
+</body>
+
+
+</html>

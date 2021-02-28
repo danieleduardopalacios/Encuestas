@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Potenza - Job Application Form Wizard with Resume upload and Branch feature">
+	<meta name="author" content="Ansonika">
+	<title>Encuesta1</title>
+
+	<!-- Favicons-->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
+		href="img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144"
+		href="img/apple-touch-icon-144x144-precomposed.png">
+
+	<!-- GOOGLE WEB FONT -->
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600" rel="stylesheet">
+
+	<!-- BASE CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/vendors.css" rel="stylesheet">
+
+	<!-- YOUR CUSTOM CSS -->
+	<link href="css/custom.css" rel="stylesheet">
+
+	<!-- MODERNIZR MENU -->
+	<script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+	<div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div><!-- /Preload -->
+
+	<div id="loader_form">
+		<div data-loader="circle-side-2"></div>
+	</div><!-- /loader_form -->
+
+	<nav>
+		<ul class="cd-primary-nav">
+			<!-- <li><a href="index.html" class="animated_link">Version 1</a></li>
+			<li><a href="index-2.html" class="animated_link">Version 2</a></li>
+			<li><a href="index-3.html" class="animated_link">Version 3</a></li>
+			<li><a href="index-4.html" class="animated_link">File Attachment demo</a></li>
+			<li><a href="about.html" class="animated_link">About Us</a></li> -->
+			<li><a href="http://cantoliconsultora.com.ar/es/" class="animated_link">Contactanos</a></li>
+			<!-- <li><a href="#0" class="animated_link">Purchase Template</a></li> -->
+		</ul>
+	</nav>
+	<!-- /menu -->
+
+	<div class="container-fluid">
+		<div class="row row-height">
+			<div class="col-xl-4 col-lg-4 content-left">
+				<div class="content-left-wrapper">
+					<a href="index.html" id="logo"><img src="img/logo.png" alt="" width="45" height="45"></a>
+					<div id="social">
+						<ul>
+							<li><a href="#0"><i class="icon-facebook"></i></a></li>
+							<li><a href="#0"><i class="icon-twitter"></i></a></li>
+							<li><a href="#0"><i class="icon-google"></i></a></li>
+							<li><a href="#0"><i class="icon-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+					<div>
+						<figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid" width="270" height="270">
+						</figure>
+						<h2>Encuesta 360° VASA</h2>
+						<p>CANTOLI Recursos Humanos</p>
+						<a href="http://cantoliconsultora.com.ar/es/" class="btn_1 rounded yellow">Conocenos!</a>
+						<!-- <a href="#start" class="btn_1 rounded mobile_btn yellow">Start Now!</a> -->
+					</div>
+					<div class="copy">© 2021 Cantoli & asoc</div>
+				</div>
+				<!-- /content-left-wrapper -->
+			</div>
+			<!-- /content-left -->
+			<div class="col-xl-8 col-lg-8 content-right" id="start">
+				<div id="wizard_container">
+					<div id="top-wizard">
+						<span id="location"></span>
+						<div id="progressbar"></div>
+					</div>
+					<!-- /top-wizard -->
+					<form id="wrapped" method="post" enctype="multipart/form-data">
+						<input id="website" name="website" type="text" value="">
+						<!-- Leave for security protection, read docs for details -->
+						<div id="middle-wizard">							 
+	                         <div class="step">
+	                            <h2 class="section_title">Presentación</h2>
+	                            <h3 class="main_question">Información Personal</h3>
+	                            <div class="form-group add_top_30">
+	                                <label for="name">Nombre y Apellido</label>
+	                                <input type="text" name="name_text" id="name_text" class="form-control required" onchange="getVals(this, 'name_field');">
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="email">Email</label>
+	                                <input type="email" name="email_text" id="email_text" class="form-control required" onchange="getVals(this, 'email_field');">
+	                            </div>
+	                            <div class="form-group">
+	                                <label for="phone">Telefono</label>
+	                                <input type="text" name="phone_text" id="phone_text" class="form-control required">
+	                            </div>
+								<label>Posición respecto del evaluado</label>
+								<div class="form-group radio_input">
+								    <label class="container_radio mr-3">Par
+								        <input type="radio" name="gender_text" value="Par" class="required">
+								        <span class="checkmark"></span>
+								    </label> </br>
+								    <label class="container_radio">Superior
+								        <input type="radio" name="gender_text" value="Superior" class="required">
+								        <span class="checkmark"></span>
+								    </label></br>
+									<label class="container_radio">Dependiente
+								        <input type="radio" name="gender_text" value="Dependiente" class="required">
+								        <span class="checkmark"></span>
+								    </label></br>
+									<label class="container_radio">Evaluado
+								        <input type="radio" name="gender_text" value="Evaluado" class="required">
+								        <span class="checkmark"></span>
+								    </label>
+								</div>
+	                        </div>  
+							<!-- /step-->
+
+
+
+							<div class="step">
+								<h2 class="section_title">Pasión por la Excelencia</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br> </br>
+								<label>Se responsabiliza personalmente del logro de los resultados y los 1 objetivos
+									fijados</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="pe1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="pe1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="pe1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="pe1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="pe1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="pe1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="pe1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								
+								<br></br>
+								<label>Demuestra y fomenta un sentido de urgencia, dinamismo y compromiso personal
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="pe2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="pe2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="pe2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="pe2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="pe2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="pe2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="pe2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label> Muestra su fortaleza al adoptar constantemente una perspectiva positiva
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="pe3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="pe3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="pe3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="pe3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="pe3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="pe3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="pe3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+							<div class="step">
+								<h2 class="section_title">Pasión por la Excelencia</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br> </br>						
+								<label>Responde con habilidad y respeto a la hora de enfrentarse a nuevos problemas y peigencias 
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="pe4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="pe4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="pe4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="pe4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="pe4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="pe4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="pe4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Demuestra fuerte compromiso y responsabilidad para alcanzar las metas que se propone , desafiando las condiciones existentes
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="pe5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="pe5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="pe5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="pe5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="pe5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="pe5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="pe5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+							
+
+
+							<div class="step">
+								<h2 class="section_title">Toma de Decisiones</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br> </br>
+								<label>Va al meollo de la cuestión para comprender a fondo el problema y, cuando resulta apropiado, implica a los demás en el proceso de toma de decisiones</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="td1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="td1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="td1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="td1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="td1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="td1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="td1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								
+								<br></br>
+								<label> Centra el análisis en la información más relevante e importante sin perderse en los detalles
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="td2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="td2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="td2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="td2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="td2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="td2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="td2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Toma medidas adecuadas para reducir al mínimo los riesgos y aumentar al máximo las oportunidades en el proceso de toma de decisiones
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="td3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="td3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="td3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="td3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="td3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="td3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="td3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+
+							<div class="step">
+								<h2 class="section_title">Toma de Decisiones</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Fomenta la evaluación exhaustiva de todo lo aprendido a través de los resultados de las decisiones comerciales 
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="td4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="td4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="td4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="td4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="td4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="td4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="td4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Sea capaz de mostrarse seguro, determinado y sensato en situaciones de tensión y alta complejidad
+								</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="td5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="td5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="td5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="td5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="td5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="td5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="td5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+
+							<div class="step">
+								<h2 class="section_title">Enfoque en Seguridad y Calidad</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br> </br>
+								<label>Se responsabiliza personalmente de su propia seguridad y la de sus compañeros</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="esc1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="esc1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="esc1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="esc1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="esc1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="esc1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="esc1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								
+								<br></br>
+								<label>Demuestra un compromiso visible con la seguridad, la calidad y la conducta ética</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="esc2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="esc2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="esc2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="esc2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="esc2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="esc2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="esc2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Hace avanzar la seguridad como valor de equipo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="esc3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="esc3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="esc3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="esc3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="esc3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="esc3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="esc3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+
+
+							<div class="step">
+								<h2 class="section_title">Enfoque en Seguridad y Calidad</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br> </br>
+								<label>Reconoce y refuerza las conductas de liderazgo seguras y cuestiona las conductas arriesgadas</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="esc4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="esc4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="esc4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="esc4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="esc4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="esc4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="esc4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								
+								<br></br>
+								<label>Desarrolla como objetivo un entorno seguro, ético y sustentable, e impulsa a la organización a lograrlo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="esc5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="esc5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="esc5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="esc5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="esc5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="esc5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="esc5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>					
+
+								
+
+								<!-- /step-->
+							</div>
+
+
+
+
+							<div class="step">
+								<h2 class="section_title">Empodera y Desarrolla</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Gestiona de forma proactiva su propio desarrollo personal y sus actividades de aprendizaje</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eyd1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eyd1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eyd1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eyd1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eyd1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eyd1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eyd1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Reflexiona y aprende de sus experiencias</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eyd2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eyd2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eyd2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eyd2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eyd2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eyd2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eyd2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Ofrece apoyo y orientación sin menoscabo de la responsabilidad que cada persona tenga sobre el asunto</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eyd3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eyd3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eyd3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eyd3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eyd3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eyd3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eyd3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+							<div class="step">
+								<h2 class="section_title">Empodera y Desarrolla (2/2)</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Capacita a los equipos de trabajo y los miembros trabajan al nivel adecuado</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eyd4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eyd4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eyd4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eyd4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eyd4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eyd4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eyd4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Identifica el potencial de los individuos, determinando las brechas de talento y guiando su desarrollo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eyd5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eyd5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eyd5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eyd5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eyd5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eyd5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eyd5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+							<div class="step">
+								<h2 class="section_title">Involucra e inspira a otros</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Trabaja en colaboración y genera confianza</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eei1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eei1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eei1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eei1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eei1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eei1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eei1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Crea unas relaciones laborales duraderas</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eei2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eei2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eei2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eei2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eei2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eei2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eei2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Muestra empatía y comprende lo que es importante para distintas personas, culturas y situaciones</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eei3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eei3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eei3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eei3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eei3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eei3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eei3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+							<div class="step">
+								<h2 class="section_title">Involucra e inspira a otros (2/2)</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Fomenta una cultura que hace sentirse a la gente valorada y respetada</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eei4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eei4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eei4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eei4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eei4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eei4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eei4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Comunica y presenta ideas y propuestas desde una visión positiva logrando el apoyo de los demás</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="eei5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="eei5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="eei5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="eei5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="eei5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="eei5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="eei5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+								
+
+							<div class="step">
+								<h2 class="section_title">Influyente</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Comunica información e ideas a los de forma sencilla</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="i1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="i1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="i1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="i1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="i1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="i1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="i1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Genera compenetración y tiene un efecto positivo y fiable</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="i2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="i2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="i2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="i2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="i2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="i2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="i2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Demuestra capacidad para escuchar de forma atenta y activa</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="i3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="i3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="i3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="i3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="i3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="i3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="i3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+							<div class="step">
+								<h2 class="section_title">Influyente (2/2)</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Se asegura de que las propuestas tengan en cuenta las necesidades y prioridades de los demás</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="i4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="i4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="i4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="i4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="i4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="i4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="i4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+
+								<br></br>
+								<label>Realiza sugerencias alineadas a las prioridades del negocio, impulsando a los stakeholders a tomar medidas fructíferas para el mismo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="i5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="i5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="i5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="i5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="i5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="i5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="i5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+							<div class="step">
+								<h2 class="section_title">Enfocado en el Cliente</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Trata activamente de comprender las necesidades y expectativas de los clientes, tanto internos como externos</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="ec1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="ec1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="ec1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="ec1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="ec1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="ec1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="ec1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Se asegura de que las soluciones, las prácticas y los procedimientos se diseñen y ejecuten de tal manera que se garantice la satisfacción de los clientes</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="ec2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="ec2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="ec2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="ec2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="ec2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="ec2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="ec2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Se asegura de que la perspectiva del cliente sea el motor de las de cisiones y las actividades comerciales</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="ec3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="ec3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="ec3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="ec3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="ec3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="ec3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="ec3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+							<div class="step">
+								<h2 class="section_title">Enfocado en el Cliente (2/2)</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Colabora con los clientes para elaborar iniciativas que se centren en el éxito comercial mutuo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="ec4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="ec4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="ec4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="ec4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="ec4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="ec4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="ec4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Identifica y explota las oportunidades de negocio con clientes nuevos y existentes</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="ec5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="ec5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="ec5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="ec5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="ec5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="ec5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="ec5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+
+							<div class="step">
+								<h2 class="section_title">Innovación y cambio</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Está abierto a los cambios y se interesa activamente en los nuevos avances y las tendencias emergentes del mercado</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="iyc1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="iyc1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="iyc1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="iyc1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="iyc1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="iyc1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="iyc1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Inspira y genera ideas y soluciones innovadoras para alcanzar los resultados comerciales</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="iyc2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="iyc2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="iyc2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="iyc2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="iyc2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="iyc2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="iyc2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Piensa y actúa con agilidad</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="iyc3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="iyc3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="iyc3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="iyc3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="iyc3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="iyc3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="iyc3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+							<div class="step">
+								<h2 class="section_title">Innovación y cambio (2/2)</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Gestiona con eficacia el proceso de cambio garantizando que la organización en su conjunto siga funcionando eficazmente</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="iyc4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="iyc4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="iyc4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="iyc4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="iyc4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="iyc4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="iyc4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Facilita un entorno cultural que estimula el pensamiento y el espíritu emprededor, innovando y arriesgándose de manera oportuna</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="iyc5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="iyc5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="iyc5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="iyc5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="iyc5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="iyc5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="iyc5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+							<div class="step">
+								<h2 class="section_title">Pensamiento Estratégico</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Comprende el efecto de las acciones y decisiones personales</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="st1" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="st1" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="st1" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="st1" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="st1" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="st1" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="st1" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Elabora y comunica planes estratégicos para su sección de la empresa</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="st2" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="st2" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="st2" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="st2" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="st2" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="st2" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="st2" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Establece objetivos y metas a corto y largo plazo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="st3" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="st3" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="st3" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="st3" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="st3" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="st3" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="st3" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+							<div class="step">
+								<h2 class="section_title">Pensamiento Estratégico (2/2)</h2>
+								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
+								<br></br>
+								<label>Demuestra un profundo conocimiento de los principales datos financieros que fomentan un crecimiento rentable en su propia área de trabajo</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="st4" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="st4" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="st4" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="st4" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="st4" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="st4" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="st4" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<br></br>
+								<label>Posee un espíritu emprendedor priorizando estrategias de mayor potencialidad para impactar positivamente en el negocio</label>
+								<div class="form-group radio_input">
+									<label class="container_radio mr-3">Muy insatisfecho
+										<input type="radio" name="st5" value="1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Insatisfecho
+										<input type="radio" name="st5" value="2" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Parcialmente insatisfecho
+										<input type="radio" name="st5" value="3" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Principalmente satisfecho
+										<input type="radio" name="st5" value="4" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">Muy satisfecho
+										<input type="radio" name="st5" value="5" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Sabe
+										<input type="radio" name="st5" value="-1" class="required">
+										<span class="checkmark"></span>
+									</label></br>
+									<label class="container_radio">No Corresponde
+										<input type="radio" name="st5" value="-2" class="required">
+										<span class="checkmark"></span>
+									</label>
+								</div>
+								<!-- /step-->
+							</div>
+
+
+
+
+
+
+
+
+								<!-- /Start Branch ============================== -->
+								<!-- <div class="step" data-state="branchtype">
+									<h2 class="section_title">Pasión por la Excelencia</h2>
+									<h5 class="main_question">Hasta que punto esta satisfecho/a de que el evaluado...
+									</h5>
+									<br></br>
+									<h3 class="main_question">Hasta que punto esta satisfecho/a de que el evaluado...
+									</h3>
+									<div class="form-group">
+										<label class="container_radio version_2">Full time availability
+											<input type="radio" name="availability" value="Full-time" class="required">
+											<span class="checkmark"></span>
+										</label>
+										<label class="container_radio version_2">Part time availability
+											<input type="radio" name="availability" value="Part-time" class="required">
+											<span class="checkmark"></span>
+										</label>
+										<label class="container_radio version_2">Freelance / Contract availability
+											<input type="radio" name="availability" value="Freelance-Contract"
+												class="required">
+											<span class="checkmark"></span>
+										</label>
+									</div>
+									<small>* Start branch radio based </small>
+								</div> -->
+
+								<!-- /Work Availability > Full-time ============================== -->
+								<!-- <div class="branch" id="Full-time">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Work Availability</h2>
+										<h3 class="main_question">Additional info about "Full Time" availability</h3>
+										<div class="form-group add_bottom_30">
+											<label>Minimum salary? (in USD)</label>
+											<label for="minimum_salary_full_time">Choose a range</label>
+											<div class="styled-select">
+												<select class="form-control required" id="minimum_salary_full_time"
+													name="minimum_salary_full_time">
+													<option value="">Choose a range</option>
+													<option value="&lt;10k">&lt;10k</option>
+													<option value="10-15k">10-15k</option>
+													<option value="15-20k">15-20k</option>
+													<option value="20-25k">20-25k</option>
+													<option value="25-30k">25-30k</option>
+													<option value="30-35k">30-35k</option>
+													<option value="35-40k">35-40k</option>
+													<option value="45-50k">45-50k</option>
+													<option value="&gt;50k">&gt;50k</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group add_bottom_30">
+											<label>How soon would you be looking to start?</label>
+											<label for="start_availability_full_time">Choose your availability</label>
+											<div class="styled-select">
+												<select class="form-control required" id="start_availability_full_time"
+													name="start_availability_full_time">
+													<option value="">Choose your availability</option>
+													<option value="I can start immediately">I can start immediately
+													</option>
+													<option value="I need to give 2 or 4 weeks notice">I need to give
+														2–4 weeks notice</option>
+													<option value="I am passively browsing">I am passively browsing
+													</option>
+													<option value="I will be available in a couple months">I will be
+														available in a couple months</option>
+													<option value="I am not sure">I am not sure</option>
+												</select>
+											</div>
+										</div>
+										<label class="custom">Are you willing to work remotely?</label>
+										<div class="form-group radio_input">
+											<label class="container_radio mr-3">Yes
+												<input type="radio" name="remotely_full_time" value="Yes"
+													class="required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio">No
+												<input type="radio" name="remotely_full_time" value="No"
+													class="required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+								<!-- /Work Availability > Part-time ============================== -->
+								<!-- <div class="branch" id="Part-time">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Work Availability</h2>
+										<h3 class="main_question">Additional info about "Part Time" availability</h3>
+										<div class="form-group add_bottom_30">
+											<label>Minimum salary? (in USD)</label>
+											<label for="minimum_salary_part_time">Choose a range</label>
+											<div class="styled-select clearfix">
+												<select class="form-control required" id="minimum_salary_part_time"
+													name="minimum_salary_part_time">
+													<option value="">Choose a range</option>
+													<option value="&lt;2k">&lt;2k</option>
+													<option value="3-5k">3-5k</option>
+													<option value="5-7k">5-7k</option>
+													<option value="7-10k">7-10k</option>
+													<option value="&gt;10k">&gt;10k</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group add_bottom_30">
+											<label>How soon would you be looking to start?</label>
+											<label for="start_availability_part_time">Choose your availability</label>
+											<div class="styled-select clearfix">
+												<select class="form-control required" id="start_availability_part_time"
+													name="start_availability_part_time">
+													<option value="">Choose your availability</option>
+													<option value="I can start immediately">I can start immediately
+													</option>
+													<option value="I need to give 2 or 4 weeks notice">I need to give
+														2–4 weeks notice</option>
+													<option value="I am passively browsing">I am passively browsing
+													</option>
+													<option value="I will be available in a couple months">I will be
+														available in a couple months</option>
+													<option value="I am not sure">I am not sure</option>
+												</select>
+											</div>
+										</div>
+										<label class="custom">When you prefer to work?</label>
+										<div class="form-group radio_input">
+											<label class="container_radio mr-3">Morning
+												<input type="radio" name="day_preference_part_time" value="Morning"
+													class="required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio mr-3">Afternoon
+												<input type="radio" name="day_preference_part_time" value="Afternoon"
+													class="required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio">No Preferences
+												<input type="radio" name="day_preference_part_time"
+													value="No Preferences" class="required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+								<!-- /Work Availability > Freelance-Contract ============================== -->
+								<!-- <div class="branch" id="Freelance-Contract">
+									<div class="step" data-state="end">
+										<h2 class="section_title">Work Availability</h2>
+										<h3 class="main_question">Additional info about "Freelance/Contract"
+											availability</h3>
+										<div class="form-group">
+											<label for="fixed_rate_contract">Minimum fixed rate? (in USD)</label>
+											<input type="text" name="fixed_rate_contract" id="fixed_rate_contract"
+												class="form-control required">
+										</div>
+										<div class="form-group">
+											<label for="hourly_rate_contract">Minimum hourly rate? (in USD)</label>
+											<input type="text" name="hourly_rate_contract" id="hourly_rate_contract"
+												class="form-control required">
+										</div>
+										<div class="form-group">
+											<label for="minimum_hours_conctract">Minimum hours for a contract?</label>
+											<input type="text" name="minimum_hours_conctract"
+												id="minimum_hours_conctract" class="form-control required">
+										</div>
+										<label class="custom">Are you willing to work remotely?</label>
+										<div class="form-group radio_input">
+											<label class="container_radio mr-3">Yes
+												<input type="radio" name="remotely_contract" value="Yes"
+													class="required">
+												<span class="checkmark"></span>
+											</label>
+											<label class="container_radio">No
+												<input type="radio" name="remotely_contract" value="No"
+													class="required">
+												<span class="checkmark"></span>
+											</label>
+										</div>
+									</div>
+								</div> -->
+								<!-- /step-->
+
+								<div class="submit step" id="end">
+									<div class="summary">
+										<div class="wrapper">
+											<h3>Gracias por tu tiempo<br><span id="name_field"></span>!</h3>
+											<p>nos contactaremos a la siguiente dirección de email <strong
+													id="email_field"></strong></p>
+										</div>
+										<div class="text-center">
+											<div class="form-group terms">
+												<label class="container_check">Por favor acepta nuestros <a href="#"
+														data-toggle="modal" data-target="#terms-txt">Términos y Condiciones</a> antes de Enviar
+													<input type="checkbox" name="terms_text" value="Yes" class="required">
+													<span class="checkmark"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- /step last-->
+
+							</div>
+							<!-- /middle-wizard -->
+							<div id="bottom-wizard">
+								<button type="button" name="backward" class="backward">Anterior</button>
+								<button type="button" name="forward" class="forward">Siguiente</button>
+								<button type="submit" name="process_text" value="ok" class="submit">Enviar</button>
+							</div>
+							<!-- /bottom-wizard -->
+					</form>
+				</div>
+				<!-- /Wizard container -->
+			</div>
+			<!-- /content-right-->
+		</div>
+		<!-- /row-->
+	</div>
+	<!-- /container-fluid -->
+
+	<div class="cd-overlay-nav">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-nav -->
+
+	<div class="cd-overlay-content">
+		<span></span>
+	</div>
+	<!-- /cd-overlay-content -->
+
+	<a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+	<!-- /menu button -->
+
+	<!-- Modal terms -->
+	<div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="termsLabel">Termi y condiciones</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in <strong>nec quod novum accumsan</strong>,
+						mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus,
+						pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+						dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+						sensibus. Lorem ipsum dolor sit amet, <strong>in porro albucius qui</strong>, in nec quod novum
+						accumsan, mei ludus tamquam dolores id. No sit debitis meliore postulant, per ex prompta alterum
+						sanctus, pro ne quod dicunt sensibus.</p>
+					<p>Lorem ipsum dolor sit amet, in porro albucius qui, in nec quod novum accumsan, mei ludus tamquam
+						dolores id. No sit debitis meliore postulant, per ex prompta alterum sanctus, pro ne quod dicunt
+						sensibus.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn_1" data-dismiss="modal">Cerrar</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/common_scripts.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/common_functions.js"></script>
+	<script src="js/file-validator.js"></script>
+	<script src="js/messages_es_AR.js"></script>
+
+	<!-- Wizard script-->
+	<script src="js/func_1.js"></script>
+
+</body>
+
+</html>

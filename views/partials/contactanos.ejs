@@ -1,0 +1,77 @@
+<section id="contacto" class="container-fluid g-color-white">
+    <div id="contact" class="g-py-80">
+      <div class="container">
+        <div class="container text-center g-max-width-750 g-mb-70">
+          <div class="text-uppercase u-heading-v2-4--bottom g-brd-primary">
+            <h2 class="text-uppercase u-heading-v2__title g-font-weight-800 g-font-size-30 g-font-size-36--md g-line-height-1_3 mb-0"><%= contenido.titulo %></h2>
+            <h4 class="h4 g-letter-spacing-4 g-font-size-10 g-font-weight-400 g-color-primary g-mb-25"><br></br>S<%- contenido.htmlText %></h4>
+          </div>
+        </div>
+
+        <form id="formcontacto">
+        <div class="row">
+          <div class="col-md-9 g-mb-25 g-mb-0--md">
+            <div class="row">
+              <div class="col-sm-6 form-group g-mb-30">
+                <input required name="name" id="inputGroup1_1" style="background-color: rgb(231, 229, 229);" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Nombre">
+              </div>
+
+              <div class="col-sm-6 form-group g-mb-30">
+                <input required name="surname" id="inputGroup1_1" style="background-color: rgb(231, 229, 229);" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Apellido">
+              </div>
+
+              <div class="col-sm-6 form-group g-mb-30">
+                <input required name="email" id="inputGroup1_2" style="background-color: rgb(231, 229, 229);" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="tel" placeholder="email@gmail.com">
+              </div>
+
+              <div class="col-sm-6 form-group g-mb-30">
+                <input name="edad" id="inputGroup1_3" style="background-color: rgb(231, 229, 229);" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Edad">
+              </div>
+
+              <div class="col-sm-6 form-group g-mb-30">
+                <input required name="residencia" id="inputGroup1_4" style="background-color: rgb(231, 229, 229);" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Lugar de residencia">
+              </div>
+
+              <div class="col-sm-6 form-group g-mb-30">
+                <input name="tel" id="inputGroup1_5" style="background-color: rgb(231, 229, 229);" class="form-control h-100 g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" type="text" placeholder="Teléfono de contacto">
+              </div>
+
+              <div class="col-md-12 form-group g-mb-30">
+                <textarea required name="message" id="inputGroup1_6" style="background-color: rgb(231, 229, 229);" class="form-control g-resize-none g-font-size-14 g-theme-bg-gray-light-v2 g-brd-none g-rounded-1 g-py-14 g-px-10" rows="4" placeholder="Mensaje"></textarea>
+              </div>
+            </div>
+
+            <div id="contactmsj"></div>
+            <div class="text-center">
+              <button class="btn u-btn-primary btn-md text-uppercase g-line-height-1 g-font-weight-700 g-font-size-11 rounded-0 g-py-12 g-px-25 mb-0" type="submit" role="button">Enviar</button>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <address class="row text-center">
+              <div class="col-sm-4 col-md-12 g-mb-30">
+                <i class="icon-directions icon d-inline-block g-font-size-20 g-color-primary g-mb-7"></i>
+                <h3 class="text-uppercase g-font-size-12 g-color-gray-dark-v5 g-font-weight-400 g-mb-5">Ubicación</h3>
+                <strong class="g-font-size-14 g-color-black"><%= contenido.ubicacion %></strong>
+              </div>
+
+              <div class="col-sm-4 col-md-12 g-mb-30">
+                <i class="icon-call-in icon d-inline-block g-font-size-20 g-color-primary g-mb-7"></i>
+                <h3 class="text-uppercase g-font-size-12 g-color-gray-dark-v5 g-font-weight-400g-mb-5">Teléfono</h3>
+                <strong class="g-font-size-14 g-color-black"><%= contenido.telefono %></strong>
+              </div>
+
+              <div class="col-sm-4 col-md-12">
+                <i class="icon-envelope-open icon d-inline-block g-font-size-20 g-color-primary g-mb-7"></i>
+                <h3 class="text-uppercase g-font-size-12 g-color-gray-dark-v5 g-font-weight-400 g-mb-5">Email</h3>
+                <a class="g-color-black g-color-black--hover" href="<%= contenido.email %>"><strong class="g-font-size-14"><%= contenido.email %></strong></a>
+              </div>
+            </address>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    </section>
+
+    <hr class="g-my-10">
