@@ -59,7 +59,7 @@ router.post('/enviar', function(req, res, next) {
       arrayInsertar.push([insert_respuesta[0].insertId ,key,texto,numero ]) 
     }
 
-    let insert_masivo =  await connection.promise().query('INSERT INTO respuestas_detalle  (id_respuesta,cod_pregunta,valor_texto,valor_int) VALUES ?',[arrayInsertar])
+    let insert_masivo =  await connection.promise().query('INSERT INTO respuestas_detalle  (id_respuesta,cod_pregunta,valor_texto,id_descripcion_respuesta) VALUES ?',[arrayInsertar])
 
     res.render('success');
    // res.writeHead(200, { 'content-type': 'application/json' });
