@@ -10,7 +10,7 @@
 	<title>Encuesta</title>
 
 	<!-- Favicons-->
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/faviconCantoli.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
 	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
 	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114"
@@ -52,7 +52,7 @@
 			<li><a href="index-3.html" class="animated_link">Version 3</a></li>
 			<li><a href="index-4.html" class="animated_link">File Attachment demo</a></li>
 			<li><a href="about.html" class="animated_link">About Us</a></li> -->
-			<li><a href="http://cantoliconsultora.com.ar/es/" class="animated_link">Contactanos</a></li>
+			<li><a href="http://cantoliconsultora.com.ar/es/contacto/" class="animated_link">Contactanos</a></li>
 			<!-- <li><a href="#0" class="animated_link">Purchase Template</a></li> -->
 		</ul>
 	</nav>
@@ -62,7 +62,7 @@
 		<div class="row row-height">
 			<div class="col-xl-4 col-lg-4 content-left">
 				<div class="content-left-wrapper">
-					<a href="index.html" id="logo"><img src="img/logoCantoli.png" alt="" height="45"></a>
+					<a href="http://cantoliconsultora.com.ar/es/" id="logo"><img src="img/logoCantoli.png" alt="" height="45"></a>
 					<div id="social">
 						<ul>
 							<li><a href="#0"><i class="icon-facebook"></i></a></li>
@@ -75,9 +75,9 @@
 					<div>
 						<figure><img src="img/info_graphic_1.svg" alt="" class="img-fluid" width="270" height="270">
 						</figure>
-						<h2>Encuesta 360° VASA</h2>
-						<p>CANTOLI Recursos Humanos</p>
-						<a href="http://cantoliconsultora.com.ar/es/" class="btn_1 rounded yellow">Conocenos!</a>
+						<h2>Encuesta 360°</h2>
+						<h2>Roberto Gonzalez</h2>
+						<!-- <a href="http://cantoliconsultora.com.ar/es/" class="btn_1 rounded yellow">Conocenos!</a> -->
 						<!-- <a href="#start" class="btn_1 rounded mobile_btn yellow">Start Now!</a> -->
 					</div>
 					<div class="copy">© 2021 Cantoli & asoc</div>
@@ -100,33 +100,33 @@
 	                            <h2 class="section_title">Presentación</h2>
 	                            <h3 class="main_question">Información Personal</h3>
 	                            <div class="form-group add_top_30">
-	                                <label for="name">Nombre y Apellido</label>
-	                                <input type="text" name="name" id="name" class="form-control required" onchange="getVals(this, 'name_field');">
+	                                <label for="name_text">Nombre y Apellido</label>
+	                                <input type="text" name="name_text" id="name_text" class="form-control required" onchange="getVals(this, 'name_field');">
 	                            </div>
-	                            <div class="form-group">
+	                            <!-- <div class="form-group">
 	                                <label for="email">Email</label>
 	                                <input type="email" name="email" id="email" class="form-control required" onchange="getVals(this, 'email_field');">
 	                            </div>
 	                            <div class="form-group">
 	                                <label for="phone">Telefono</label>
 	                                <input type="text" name="phone" id="phone" class="form-control required">
-	                            </div>
+	                            </div> -->
 								<label>Posición respecto del evaluado</label>
 								<div class="form-group radio_input">
 								    <label class="container_radio mr-3">Par
-								        <input type="radio" name="gender" value="Par" class="required">
+								        <input type="radio" name="posicion_text" value="Par" class="required">
 								        <span class="checkmark"></span>
 								    </label> </br>
 								    <label class="container_radio">Superior
-								        <input type="radio" name="gender" value="Superior" class="required">
+								        <input type="radio" name="posicion_text" value="Superior" class="required">
 								        <span class="checkmark"></span>
 								    </label></br>
 									<label class="container_radio">Dependiente
-								        <input type="radio" name="gender" value="Dependiente" class="required">
+								        <input type="radio" name="posicion_text" value="Dependiente" class="required">
 								        <span class="checkmark"></span>
 								    </label></br>
 									<label class="container_radio">Evaluado
-								        <input type="radio" name="gender" value="Evaluado" class="required">
+								        <input type="radio" name="posicion_text" value="Evaluado" class="required">
 								        <span class="checkmark"></span>
 								    </label>
 								</div>
@@ -139,7 +139,7 @@
 								<h2 class="section_title">Pasión por la Excelencia</h2>
 								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br> </br>
-								<label>Se responsabiliza personalmente del logro de los resultados y los 1 objetivos
+								<label>Se responsabiliza personalmente del logro de los resultados y los objetivos
 									fijados</label>
 								<div class="form-group radio_input">
 									<label class="container_radio mr-3">Muy insatisfecho
@@ -239,13 +239,7 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
 
-
-							<div class="step">
-								<h2 class="section_title">Pasión por la Excelencia</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br> </br>						
 								<label>Responde con habilidad y respeto a la hora de enfrentarse a nuevos problemas y peigencias 
 								</label>
@@ -316,9 +310,8 @@
 								<!-- /step-->
 							</div>
 
-							
 
-
+						
 							<div class="step">
 								<h2 class="section_title">Toma de Decisiones</h2>
 								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
@@ -422,15 +415,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-
-
-
-							<div class="step">
-								<h2 class="section_title">Toma de Decisiones</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Fomenta la evaluación exhaustiva de todo lo aprendido a través de los resultados de las decisiones comerciales 
 								</label>
@@ -500,8 +484,6 @@
 								</div>
 								<!-- /step-->
 							</div>
-
-
 
 
 							<div class="step">
@@ -605,16 +587,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-
-
-
-
-							<div class="step">
-								<h2 class="section_title">Enfoque en Seguridad y Calidad</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br> </br>
 								<label>Reconoce y refuerza las conductas de liderazgo seguras y cuestiona las conductas arriesgadas</label>
 								<div class="form-group radio_input">
@@ -679,71 +651,9 @@
 										<input type="radio" name="esc5" value="-2" class="required">
 										<span class="checkmark"></span>
 									</label>
-								</div>					
-
-									<div class="form-group radio_input">
-									<label class="container_radio mr-3">Muy insatisfecho
-										<input type="radio" name="esc5" value="1" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Insatisfecho
-										<input type="radio" name="esc5" value="2" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Parcialmente insatisfecho
-										<input type="radio" name="esc5" value="3" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Principalmente satisfecho
-										<input type="radio" name="esc5" value="4" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Muy satisfecho
-										<input type="radio" name="esc5" value="5" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">No Sabe
-										<input type="radio" name="esc5" value="-1" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">No Corresponde
-										<input type="radio" name="esc5" value="-2" class="required">
-										<span class="checkmark"></span>
-									</label>
-								</div>								<div class="form-group radio_input">
-									<label class="container_radio mr-3">Muy insatisfecho
-										<input type="radio" name="esc5" value="1" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Insatisfecho
-										<input type="radio" name="esc5" value="2" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Parcialmente insatisfecho
-										<input type="radio" name="esc5" value="3" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Principalmente satisfecho
-										<input type="radio" name="esc5" value="4" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">Muy satisfecho
-										<input type="radio" name="esc5" value="5" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">No Sabe
-										<input type="radio" name="esc5" value="-1" class="required">
-										<span class="checkmark"></span>
-									</label></br>
-									<label class="container_radio">No Corresponde
-										<input type="radio" name="esc5" value="-2" class="required">
-										<span class="checkmark"></span>
-									</label>
-								</div>							
-
+								</div>		
 								<!-- /step-->
 							</div>
-
 
 
 
@@ -848,13 +758,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-
-							<div class="step">
-								<h2 class="section_title">Empodera y Desarrolla (2/2)</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Capacita a los equipos de trabajo y los miembros trabajan al nivel adecuado</label>
 								<div class="form-group radio_input">
@@ -922,7 +825,6 @@
 								</div>
 								<!-- /step-->
 							</div>
-
 
 
 							<div class="step">
@@ -1026,12 +928,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-							<div class="step">
-								<h2 class="section_title">Involucra e inspira a otros (2/2)</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Fomenta una cultura que hace sentirse a la gente valorada y respetada</label>
 								<div class="form-group radio_input">
@@ -1100,7 +996,7 @@
 								<!-- /step-->
 							</div>
 
-								
+
 
 							<div class="step">
 								<h2 class="section_title">Influyente</h2>
@@ -1203,12 +1099,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-							<div class="step">
-								<h2 class="section_title">Influyente (2/2)</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Se asegura de que las propuestas tengan en cuenta las necesidades y prioridades de los demás</label>
 								<div class="form-group radio_input">
@@ -1378,12 +1268,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-							<div class="step">
-								<h2 class="section_title">Enfocado en el Cliente (2/2)</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Colabora con los clientes para elaborar iniciativas que se centren en el éxito comercial mutuo</label>
 								<div class="form-group radio_input">
@@ -1450,7 +1334,6 @@
 								</div>
 								<!-- /step-->
 							</div>
-
 
 
 
@@ -1553,12 +1436,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-							<div class="step">
-								<h2 class="section_title">Innovación y cambio (2/2)</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Gestiona con eficacia el proceso de cambio garantizando que la organización en su conjunto siga funcionando eficazmente</label>
 								<div class="form-group radio_input">
@@ -1727,12 +1604,6 @@
 										<span class="checkmark"></span>
 									</label>
 								</div>
-								<!-- /step-->
-							</div>
-
-							<div class="step">
-								<h2 class="section_title">Pensamiento Estratégico (2/2)</h2>
-								<label>Hasta que punto esta satisfecho/a de que el evaluado...</label>
 								<br></br>
 								<label>Demuestra un profundo conocimiento de los principales datos financieros que fomentan un crecimiento rentable en su propia área de trabajo</label>
 								<div class="form-group radio_input">
@@ -1799,8 +1670,6 @@
 								</div>
 								<!-- /step-->
 							</div>
-
-
 
 
 
@@ -1996,8 +1865,8 @@
 									<div class="summary">
 										<div class="wrapper">
 											<h3>Gracias por tu tiempo<br><span id="name_field"></span>!</h3>
-											<p>nos contactaremos a la siguiente dirección de email <strong
-													id="email_field"></strong></p>
+											<!-- <p>nos contactaremos a la siguiente dirección de email <strong
+													id="email_field"></strong></p> -->
 										</div>
 										<div class="text-center">
 											<div class="form-group terms">
